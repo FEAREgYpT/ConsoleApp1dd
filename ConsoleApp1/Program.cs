@@ -111,3 +111,68 @@ for (int i = 0; i < names1.Length; i++)
 }
 */
 
+int[] numbers = new int[5];
+for (int i = 0; i < numbers.Length; i++)
+{
+    while (true) // حلقة لا نهائية حتى إدخال قيمة صالحة
+    {
+        Console.WriteLine("Enter an integer value: ");
+        string input = Console.ReadLine();
+        if (int.TryParse(input, out numbers[i]))
+            break; // الخروج من الحلقة إذا كانت القيمة صالحة
+        Console.WriteLine("Invalid input. Please enter a valid number:");
+    }
+}
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine($"the index of {i + 1} is " + numbers[i]);
+
+}
+
+Console.WriteLine("----------------------------------------");
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("أدخل الأرقام مفصولة بمسافات (مثال: 10 20 30):");
+        int[] numbers = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+        // طباعة المصفوفة للتأكد
+        Console.WriteLine("الأرقام المدخلة:");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+
+Console.WriteLine("----------------------------------------");
+
+using System.Linq;
+
+int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+Console.WriteLine("----------------------------------------");
+
+int[] numbers = new int[3];
+Console.WriteLine("أدخل 3 أرقام (رقم لكل سطر):");
+for (int i = 0; i < numbers.Length; i++) numbers[i] = int.Parse(Console.ReadLine());
+
+Console.WriteLine("----------------------------------------");
+
+
+int[] numbers = new int[5];
+for (int i = 0; i < numbers.Length; i++)
+    while (!int.TryParse(Console.ReadLine(), out numbers[i]))
+        Console.WriteLine("إدخال خاطئ! أدخل رقمًا صحيحًا:");
+
+Console.WriteLine("----------------------------------------");
+
+
+
+
