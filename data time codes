@@ -1,0 +1,20 @@
+
+// الاكواد المستعملة في السطولار البرمجية
+// TimeOnly.FromDateTime(DateTime.Now)    الوقت الحالي
+// DateOnly.FromDateTime(DateTime.Now)     التاريخ الحالي
+// TimeSpan span = now - worktimebeginning;  // تستعمل لحساب الفرق بين وقتين
+//DateTime datenow = new DateTime(2025, 4, 25);  
+//Console.WriteLine(datenow.DayOfWeek); // طباعة اليوم من الأسبوع
+
+/*TimeOnly worktimebeginning = new TimeOnly(8, 20);                 // بداية العمل
+TimeOnly now = TimeOnly.FromDateTime(DateTime.Now);                 // الوقت الحالي
+TimeSpan span = now - worktimebeginning;                            // الفرق بين الوقتين
+Console.WriteLine($"The hours that he worked equal : {span}");     //   طباعة الفرق بين الوقتين
+
+
+Console.WriteLine($"Duration : {span.TotalMinutes}");
+DateTime datenow = DateTime.Now;                                // تعيين الوقت الحالي الى متغير
+Console.WriteLine($"date and time now is {datenow}");           // طباعة المتغير الذي يعبر عن الوقت الحالي
+DateOnly today = DateOnly.FromDateTime(DateTime.Now);           // تعيين التاريخ الحالي الى متغير
+Console.WriteLine($"Date now is : {today}");                    // طباعة المتغير الذي يعبر عن التاريخ الحالي
+Console.WriteLine($"Time now is : {now}");*/                    // طباعة الوقت الحالي
