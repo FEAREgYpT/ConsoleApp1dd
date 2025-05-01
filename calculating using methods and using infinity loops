@@ -1,0 +1,109 @@
+// A program that calculates the share of each individual in an association using functions, loops, and infinite loops.
+
+int MEM = 0;
+int AMO = 0;
+
+//
+//
+//الحلقة الأولى لقراءة عدد الأعضاء
+
+bool repeat = true;
+
+while (repeat)
+{
+    while (true)
+    {
+        Console.WriteLine("Please enter the number of the members ");
+        string members = Console.ReadLine();
+        if (int.TryParse(members, out MEM))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number");
+        }
+    }
+
+    // الحلقة الثانية لقراءة المبلغ
+    while (true)
+    {
+        Console.WriteLine("Please enter the number of the amount ");
+        string amount = Console.ReadLine();
+        if (int.TryParse(amount, out AMO))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number");
+        }
+    }
+
+    // استدعاء الدالة
+    var share = distribute(AMO, MEM);
+    Console.WriteLine($"The share of {MEM} members is {share}");
+
+
+    Console.WriteLine("do you want to reduce numbers of members ? ");
+    string reduceMembers2 = Console.ReadLine();
+
+    if (reduceMembers2 != null && reduceMembers2.ToLower() == "yes")
+
+    {
+        while (true)
+        {
+            Console.WriteLine("please wnter the mount of numbers you want to reduce");
+            string reduceMembers3 = Console.ReadLine();
+
+            if (int.TryParse(reduceMembers3, out int INTreducedMEM))
+            {
+
+                int reduced2 = reduce(MEM, INTreducedMEM);
+                var newshare = distribute(AMO, reduced2);
+                Console.WriteLine($"The share of {reduced2} members is {newshare}");
+                break;
+
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid reduction value");
+
+            }
+        }
+
+    }
+
+    else if (reduceMembers2 != null && reduceMembers2.ToLower() == "no")
+    {
+                 Console.WriteLine("Do you want to make another calculation ? ");
+                 string repeatchoice = Console.ReadLine();
+
+                 repeat = (repeatchoice != null && repeatchoice.ToLower() == "yes");
+
+                 if (!repeat)
+                        {
+                             Console.WriteLine("Thanks for using our program");
+                        }
+
+
+
+
+
+    }
+
+          
+}
+
+// دالة التوزيع
+static int distribute(int amount, int members)
+    {
+        return amount / members;
+    }
+
+static int reduce(int members, int value)
+
+{
+    return members -= value; 
+}
