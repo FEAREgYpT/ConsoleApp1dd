@@ -1,16 +1,12 @@
-
-
-
 // الاكواد المستعملة في السطولار البرمجية
-
-//DateTime mydate =  DateTime.Now;    // تعيين الوقت الحالي الى متغير
-//string formatedDatatime = string.Format("date is  {0:yyyy-MMM-dd-dddd HH:MM}",mydate); // تعيين الوقت الحالي الى متغير
-//Console.WriteLine("date and time now is {0:yyyy}", formatedDatatime); // طباعة المتغير الذي يعبر عن الوقت الحالي بالسنة فقط
-// TimeOnly.FromDateTime(DateTime.Now)    الوقت الحالي
-// DateOnly.FromDateTime(DateTime.Now)     التاريخ الحالي
-// TimeSpan span = now - worktimebeginning;  // تستعمل لحساب الفرق بين وقتين
-//DateTime datenow = new DateTime(2025, 4, 25);  
-//Console.WriteLine(datenow.DayOfWeek); // طباعة اليوم من الأسبوع
+DateTime mydate =  DateTime.Now;    // تعيين الوقت الحالي الى متغير
+string formatedDatatime = string.Format("date is  {0:yyyy-MMM-dd-dddd HH:MM}",mydate); // تعيين الوقت الحالي الى متغير
+Console.WriteLine("date and time now is {0:yyyy}", formatedDatatime); // طباعة المتغير الذي يعبر عن الوقت الحالي بالسنة فقط
+TimeOnly.FromDateTime(DateTime.Now)    الوقت الحالي
+DateOnly.FromDateTime(DateTime.Now)     التاريخ الحالي 
+TimeSpan span = now - worktimebeginning;  // تستعمل لحساب الفرق بين وقتين
+DateTime datenow = new DateTime(2025, 4, 25);  
+Console.WriteLine(datenow.DayOfWeek); // طباعة اليوم من الأسبوع
 
 /*TimeOnly worktimebeginning = new TimeOnly(8, 20);                 // بداية العمل
 TimeOnly now = TimeOnly.FromDateTime(DateTime.Now);                 // الوقت الحالي
